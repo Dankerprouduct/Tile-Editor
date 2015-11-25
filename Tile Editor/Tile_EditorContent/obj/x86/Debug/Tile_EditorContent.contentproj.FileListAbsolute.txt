@@ -1,0 +1,1 @@
+c:\users\david\documents\visual studio 2015\Projects\Tile Editor\Tile Editor\Tile_EditorContent\obj\x86\Debug\Tile_EditorContent.contentprojResolveAssemblyReference.cache
