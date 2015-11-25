@@ -23,7 +23,7 @@ namespace Tile_Editor
             tiles.Add(content.Load<Texture2D>("BlankTile")); 
             tiles.Add(content.Load<Texture2D>("Tile"));
             tiles.Add(content.Load<Texture2D>("Tile2"));
-
+            tiles.Add(content.Load<Texture2D>("RoadTile")); 
             
         }
         

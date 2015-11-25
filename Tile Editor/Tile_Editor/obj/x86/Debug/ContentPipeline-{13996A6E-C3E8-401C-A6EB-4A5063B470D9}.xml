@@ -55,6 +55,15 @@
       <Output>c:\users\david\documents\visual studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\Cursor.xnb</Output>
       <Time>2015-11-24T21:19:43.7255342-05:00</Time>
     </Item>
+    <Item>
+      <Source>RoadTile.png</Source>
+      <Name>RoadTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\RoadTile.xnb</Output>
+      <Time>2015-11-24T23:56:26.2868805-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{13996A6E-C3E8-401C-A6EB-4A5063B470D9}</ContentProjectGUID>

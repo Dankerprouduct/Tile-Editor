@@ -4,3 +4,4 @@ Content\BlankTile.xnb
 Content\GUI.xnb
 Content\BackToGUI.xnb
 Content\Cursor.xnb
+Content\RoadTile.xnb
