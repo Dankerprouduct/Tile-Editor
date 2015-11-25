@@ -18,7 +18,7 @@ namespace Tile_Editor
         Viewport view;
         Vector2 center;
         public Matrix transform;
-        float scale = .3f;
+        public float scale = .3f;
         KeyboardState keyboardState;
 
         public Camera(Viewport vPort)
@@ -31,12 +31,14 @@ namespace Tile_Editor
             if (keyboardState.IsKeyDown(Keys.E))
             {
                 scale += .001f;
+                Console.WriteLine(scale);
             }
             if (keyboardState.IsKeyDown(Keys.Q))
             {
                 scale -= .001f;
+                Console.WriteLine(scale);
             }
-
+            
             center = new Vector2((game.curPos.X + (game.cursor.Width / 2)) - (game.width / 2), (game.curPos.Y + (game.cursor.Height / 2)) - (game.height / 2));
 
             transform = Matrix.CreateScale(new Vector3(scale, scale, 1)) * Matrix.CreateTranslation(new Vector3(-center.X, -center.Y, 0)); 
