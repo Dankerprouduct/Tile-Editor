@@ -39,7 +39,7 @@ namespace Tile_Editor
         int y;
         Vector2 mousePosition;
         Random random;
-        int size = 100;
+        int size = 250;
         bool swStart = false;
         bool largeBrush = false; 
         public Game1()
@@ -137,6 +137,16 @@ namespace Tile_Editor
             {
                 largeBrush = !largeBrush; 
             }
+            if (keyboardState.IsKeyDown(Keys.F) && oldKeyboardState.IsKeyUp(Keys.F))
+            {
+                for(x = 0; x < size; x++)
+                {
+                    for(y = 0; y < size; y++)
+                    {
+                        tileMap[x, y] = tileID;
+                    }
+                }
+            }
             oldKeyboardState = keyboardState;
             x = Convert.ToInt32(worldPosition.X) / (int)(50);
             y = Convert.ToInt32(worldPosition.Y) / (int)(50);
@@ -220,6 +230,10 @@ namespace Tile_Editor
                         tileString = "Tile2(Green)";
                         break; 
                     }
+                    case 3:{
+                        tileString = "Road Tile";
+                        break; 
+                    }
             }
 
             base.Update(gameTime);
@@ -228,7 +242,7 @@ namespace Tile_Editor
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Gray * .5f);
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                 BlendState.AlphaBlend,
