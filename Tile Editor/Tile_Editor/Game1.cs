@@ -230,7 +230,8 @@ namespace Tile_Editor
                         tileString = "Tile2(Green)";
                         break; 
                     }
-                    case 3:{
+                    case 3:
+                    {
                         tileString = "Road Tile";
                         break; 
                     }
