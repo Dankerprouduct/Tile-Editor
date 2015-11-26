@@ -64,6 +64,33 @@
       <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\RoadTile.xnb</Output>
       <Time>2015-11-25T00:05:47.3120774-05:00</Time>
     </Item>
+    <Item>
+      <Source>WoodWallTile.png</Source>
+      <Name>WoodWallTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\WoodWallTile.xnb</Output>
+      <Time>2015-11-25T10:53:09.4604936-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BuildingWallTile.png</Source>
+      <Name>BuildingWallTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BuildingWallTile.xnb</Output>
+      <Time>2015-11-25T19:14:37.1103617-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BuildingWallTile2.png</Source>
+      <Name>BuildingWallTile2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BuildingWallTile2.xnb</Output>
+      <Time>2015-11-25T19:23:10.6259368-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{13996A6E-C3E8-401C-A6EB-4A5063B470D9}</ContentProjectGUID>

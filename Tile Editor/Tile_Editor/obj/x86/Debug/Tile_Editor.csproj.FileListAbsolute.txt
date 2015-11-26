@@ -21,3 +21,6 @@ c:\users\david\documents\visual studio 2015\Projects\Tile Editor\Tile Editor\Til
 c:\users\david\documents\visual studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BackToGUI.xnb
 c:\users\david\documents\visual studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\Cursor.xnb
 C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\RoadTile.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\WoodWallTile.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BuildingWallTile.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BuildingWallTile2.xnb

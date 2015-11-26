@@ -23,6 +23,7 @@ namespace Tile_Editor
         MouseState ms;
         Tiles tiles = new Tiles();
         int[,] tileMap;
+        int[,] tileMap2;
         int tileID = 0;
         string tileString = "Blank"; 
         SpriteFont font;
@@ -43,18 +44,21 @@ namespace Tile_Editor
         bool swStart = false;
         bool largeBrush = false;
 
+        int layerNum = 1; 
         float layer1 = 1;
         float layer2 = 1;
+        
 
         Vector2 text1Pos;
         Vector2 text2Pos;
         Vector2 text3Pos;
         Vector2 text4Pos; 
+
         float fadeText = 0;
         float fadeText2 = 0;
         float fadeText3 = 0;
         float fadeText4 = 0;
-        float textSpeed = -5f; 
+        float textSpeed = -5f;
 
         public Game1()
         {
@@ -79,12 +83,13 @@ namespace Tile_Editor
         protected override void LoadContent()
         {
             random = new Random(); 
-            sW = new StreamWriter(@"C:\Users\David\Desktop\" + random.Next(0, 100000) + ".txt");
+            sW = new StreamWriter(@"C:\Users\David\Desktop\Tile Maps\tilemapid" + random.Next(0, 100000) + ".txt");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("GUI"); 
             tiles.LoadContent(Content);
             GuiBack = Content.Load<Texture2D>("BackToGUI"); 
             tileMap = new int[size, size];
+            tileMap2 = new int[size, size];
             cursor = Content.Load<Texture2D>("Cursor");
             curPos = new Vector2(400, 300); 
         }
@@ -94,7 +99,6 @@ namespace Tile_Editor
         {
             
         }
-
 
         protected override void Update(GameTime gameTime)
         {
@@ -289,14 +293,31 @@ namespace Tile_Editor
                         tileString = "Road Tile";
                         break; 
                     }
+                case 4:
+                    {
+                        tileString = "Wood Tile Wall";
+                        break; 
+                    }
+                case 5:
+                    {
+                        tileString = "Building Wall";
+                        break;
+                    }
+                case 6:
+                    {
+                        tileString = "Building Wall 2";
+                        break;
+                    }
             }
             if (keyboardState.IsKeyDown(Keys.D1))
             {
+                layerNum = 1;
                 layer1 = 1;
                 layer2 = .09f; 
             }
             if (keyboardState.IsKeyDown(Keys.D2))
             {
+                layerNum = 2; 
                 layer1 = .09f;
                 layer2 = .5f;
             }
@@ -312,6 +333,7 @@ namespace Tile_Editor
                 BlendState.AlphaBlend,
                 null, null, null, null,
                 camera.transform);
+
 
 
             for (int x = 0; x < tileMap.GetLength(1); x++)
@@ -330,7 +352,7 @@ namespace Tile_Editor
                 }
 
             }
-
+            
 
             //spriteBatch.Draw(cursor, curPos, Color.White); 
 
