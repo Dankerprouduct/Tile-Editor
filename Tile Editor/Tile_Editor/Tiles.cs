@@ -27,7 +27,8 @@ namespace Tile_Editor
             tiles.Add(content.Load<Texture2D>("WoodWallTile"));
             tiles.Add(content.Load<Texture2D>("BuildingWallTile"));
             tiles.Add(content.Load<Texture2D>("BuildingWallTile2"));
-
+            tiles.Add(content.Load<Texture2D>("WoodFloor Tile"));
+            tiles.Add(content.Load<Texture2D>("BlackTile")); 
         }
         
     }

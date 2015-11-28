@@ -91,6 +91,24 @@
       <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BuildingWallTile2.xnb</Output>
       <Time>2015-11-25T19:23:10.6259368-05:00</Time>
     </Item>
+    <Item>
+      <Source>WoodFloor Tile.png</Source>
+      <Name>WoodFloor Tile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\WoodFloor Tile.xnb</Output>
+      <Time>2015-11-28T15:59:18.8927156-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BlackTile.png</Source>
+      <Name>BlackTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Documents\Visual Studio 2015\Projects\Tile Editor\Tile Editor\Tile_Editor\bin\x86\Debug\Content\BlackTile.xnb</Output>
+      <Time>2015-11-28T16:03:20.5695554-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{13996A6E-C3E8-401C-A6EB-4A5063B470D9}</ContentProjectGUID>

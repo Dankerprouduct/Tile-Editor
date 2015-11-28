@@ -40,7 +40,7 @@ namespace Tile_Editor
         int y;
         Vector2 mousePosition;
         Random random;
-        int size = 250;
+        int size = 11;
         bool swStart = false;
         bool largeBrush = false;
 
@@ -58,7 +58,7 @@ namespace Tile_Editor
         float fadeText2 = 0;
         float fadeText3 = 0;
         float fadeText4 = 0;
-        float textSpeed = -5f;
+        float textSpeed = -.1f;
 
         public Game1()
         {
@@ -114,11 +114,7 @@ namespace Tile_Editor
             ms = Mouse.GetState();
             mousePosition = new Vector2(ms.X, ms.Y);
             worldPosition = Vector2.Transform(mousePosition, Matrix.Invert(camera.transform));
-            if (tileID >= tiles.tiles.Count)
-            {
-                tileID = 0;
-            }
-            if(keyboardState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
+            if (keyboardState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
             {
                 text4Pos = new Vector2(worldPosition.X, worldPosition.Y); 
                 fadeText4 = 1;
@@ -157,7 +153,39 @@ namespace Tile_Editor
                 text4Pos.Y -= textSpeed;
                 fadeText4 = fadeText4 - .01f; 
             }
-            if(keyboardState.IsKeyDown(Keys.Space) && oldKeyboardState.IsKeyUp(Keys.Space))
+            if(keyboardState.IsKeyDown(Keys.Q) && oldKeyboardState.IsKeyUp(Keys.Q))
+            {
+                text1Pos = new Vector2(worldPosition.X, worldPosition.Y);
+                tileID--;
+                fadeText = 1;
+                if (tileID < 0)
+                {
+                    tileID = tiles.tiles.Count - 1;
+                }
+            }
+            else
+            {
+                text1Pos.Y -= textSpeed;
+                fadeText = fadeText - .01f;
+
+            }
+            if (keyboardState.IsKeyDown(Keys.E) && oldKeyboardState.IsKeyUp(Keys.E))
+            {
+                text1Pos = new Vector2(worldPosition.X, worldPosition.Y);
+                tileID++;
+                fadeText = 1;
+                if (tileID >= tiles.tiles.Count)
+                {
+                    tileID = 0;
+                }
+            }
+            else
+            {
+                text1Pos.Y -= textSpeed;
+                fadeText = fadeText - .01f;
+
+            }
+            if (keyboardState.IsKeyDown(Keys.Space) && oldKeyboardState.IsKeyUp(Keys.Space))
             {
                 text2Pos = new Vector2(worldPosition.X, worldPosition.Y); 
                 largeBrush = !largeBrush;
@@ -223,20 +251,6 @@ namespace Tile_Editor
                 }
             }
 
-            if(ms.RightButton == ButtonState.Pressed && oldMs.RightButton == ButtonState.Released)
-            {
-                text1Pos = new Vector2(worldPosition.X, worldPosition.Y); 
-                tileID++;
-                fadeText = 1;
-
-                
-            }
-            else
-            {
-                text1Pos.Y -= textSpeed; 
-                fadeText = fadeText - .01f; 
-                
-            }
             if (ms.LeftButton == ButtonState.Pressed && oldMs.LeftButton == ButtonState.Released)
             {
                 text2Pos = new Vector2(worldPosition.X, worldPosition.Y); 
@@ -307,6 +321,17 @@ namespace Tile_Editor
                     {
                         tileString = "Building Wall 2";
                         break;
+                    }
+                case 7:
+                    {
+                        tileString = "Wood Floor Tile 1";
+                        break; 
+                    }
+                case 8:
+                    {
+                       
+                        tileString = "Black Tile";
+                        break; 
                     }
             }
             if (keyboardState.IsKeyDown(Keys.D1))

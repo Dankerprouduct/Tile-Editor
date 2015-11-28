@@ -8,3 +8,5 @@ Content\RoadTile.xnb
 Content\WoodWallTile.xnb
 Content\BuildingWallTile.xnb
 Content\BuildingWallTile2.xnb
+Content\WoodFloor Tile.xnb
+Content\BlackTile.xnb

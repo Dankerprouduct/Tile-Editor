@@ -20,7 +20,8 @@ namespace Tile_Editor
         public Matrix transform;
         public float scale = .3f;
         KeyboardState keyboardState;
-
+        float previousMouseState = 0;
+        MouseState currentMouse; 
         public Camera(Viewport vPort)
         {
             view = vPort; 
@@ -28,17 +29,18 @@ namespace Tile_Editor
         public void Update(GameTime gameTime, Game1 game)
         {
             keyboardState = Keyboard.GetState();
-            if (keyboardState.IsKeyDown(Keys.E))
+            currentMouse = Mouse.GetState();
+
+            if(currentMouse.ScrollWheelValue < previousMouseState)
             {
-                scale += .001f;
-                Console.WriteLine(scale);
+                scale -= .01f;
+                
             }
-            if (keyboardState.IsKeyDown(Keys.Q))
+            if(currentMouse.ScrollWheelValue > previousMouseState)
             {
-                scale -= .001f;
-                Console.WriteLine(scale);
+                scale += .01f;
             }
-            
+            previousMouseState = currentMouse.ScrollWheelValue;
             center = new Vector2((game.curPos.X + (game.cursor.Width / 2)) - (game.width / 2), (game.curPos.Y + (game.cursor.Height / 2)) - (game.height / 2));
 
             transform = Matrix.CreateScale(new Vector3(scale, scale, 1)) * Matrix.CreateTranslation(new Vector3(-center.X, -center.Y, 0)); 
